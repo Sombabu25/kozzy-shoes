@@ -4,6 +4,7 @@ import ProductsSection from '@/components/ProductsSection';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import heroImage from '@/assets/hero-shoes.jpg';
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <AboutSection />
       <ContactSection />
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
