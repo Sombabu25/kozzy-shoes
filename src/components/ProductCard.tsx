@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MessageCircle, Plus, Minus } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface Product {
@@ -19,19 +19,12 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, index, phoneNumber }: ProductCardProps) => {
   const [selectedSize, setSelectedSize] = useState<number | null>(null);
-  const [quantity, setQuantity] = useState(1);
-
-  const handleQuantityChange = (delta: number) => {
-    setQuantity((prev) => Math.max(1, Math.min(10, prev + delta)));
-  };
-
-  const totalPrice = product.offerPrice * quantity;
 
   const handleWhatsAppOrder = () => {
     if (!selectedSize) return;
     
     const message = encodeURIComponent(
-      `Hi! I'm interested in ordering:\n\n*${product.name}*\nSize: ${selectedSize}\nQuantity: ${quantity}\nTotal: Rs. ${totalPrice.toLocaleString()}\n\nPlease confirm availability and delivery details.`
+      `Hi! I'm interested in ordering:\n\n*${product.name}*\nSize: ${selectedSize}\nPrice: Rs. ${product.offerPrice.toLocaleString()}\n\nPlease confirm availability and delivery details.`
     );
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -89,30 +82,6 @@ const ProductCard = ({ product, index, phoneNumber }: ProductCardProps) => {
           </div>
         </div>
 
-        {/* Quantity Selector */}
-        <div className="mb-3 sm:mb-4">
-          <p className="text-xs text-muted-foreground mb-1.5 sm:mb-2">Quantity:</p>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => handleQuantityChange(-1)}
-              disabled={quantity <= 1}
-              className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-md bg-secondary text-secondary-foreground border border-border hover:bg-muted transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <Minus size={14} />
-            </button>
-            <span className="w-8 text-center font-semibold text-sm sm:text-base">{quantity}</span>
-            <button
-              onClick={() => handleQuantityChange(1)}
-              disabled={quantity >= 10}
-              className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-md bg-secondary text-secondary-foreground border border-border hover:bg-muted transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <Plus size={14} />
-            </button>
-            <span className="ml-auto text-sm font-semibold text-price-offer">
-              Total: Rs. {totalPrice.toLocaleString()}
-            </span>
-          </div>
-        </div>
 
         {/* WhatsApp Button */}
         <Button
