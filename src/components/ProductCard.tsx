@@ -89,7 +89,7 @@ const ProductCard = ({ product, index, phoneNumber }: ProductCardProps) => {
           className="w-full bg-whatsapp hover:bg-whatsapp-hover text-primary-foreground font-semibold py-5 rounded-lg transition-all duration-300 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <MessageCircle size={18} className="mr-2" />
-          {selectedSize ? `Order Size ${selectedSize}` : 'Select a Size'}
+          Order on WhatsApp
         </Button>
       </div>
     </div>
