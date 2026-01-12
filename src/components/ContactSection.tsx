@@ -1,8 +1,8 @@
 import { MapPin, Phone, MessageCircle, Clock, Truck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const PHONE_NUMBER = '9779800000000'; // Replace with actual number
-const DISPLAY_PHONE = '+977 98XXXXXXXX'; // Replace with actual display number
+const PHONE_NUMBER = '9779811825657';
+const DISPLAY_PHONE = '+977 9811825657';
 
 const ContactSection = () => {
   const handleWhatsAppClick = () => {

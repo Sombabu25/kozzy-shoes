@@ -57,7 +57,7 @@ const products = [
   },
 ];
 
-const PHONE_NUMBER = '9779800000000'; // Replace with actual number
+const PHONE_NUMBER = '9779811825657';
 
 const ProductsSection = () => {
   return (
