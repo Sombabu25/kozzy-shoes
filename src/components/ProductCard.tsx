@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -17,9 +18,13 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product, index, phoneNumber }: ProductCardProps) => {
+  const [selectedSize, setSelectedSize] = useState<number | null>(null);
+
   const handleWhatsAppOrder = () => {
+    if (!selectedSize) return;
+    
     const message = encodeURIComponent(
-      `Hi! I'm interested in ordering:\n\n*${product.name}*\nPrice: Rs. ${product.offerPrice}\n\nPlease let me know the available sizes and delivery details.`
+      `Hi! I'm interested in ordering:\n\n*${product.name}*\nSize: ${selectedSize}\nPrice: Rs. ${product.offerPrice}\n\nPlease confirm availability and delivery details.`
     );
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -59,15 +64,20 @@ const ProductCard = ({ product, index, phoneNumber }: ProductCardProps) => {
 
         {/* Sizes */}
         <div className="mb-4">
-          <p className="text-xs text-muted-foreground mb-2">Available Sizes:</p>
+          <p className="text-xs text-muted-foreground mb-2">Select Size:</p>
           <div className="flex flex-wrap gap-1.5">
             {product.sizes.map((size) => (
-              <span
+              <button
                 key={size}
-                className="px-2.5 py-1 bg-secondary text-secondary-foreground text-xs rounded-md font-medium"
+                onClick={() => setSelectedSize(size)}
+                className={`px-3 py-1.5 text-xs rounded-md font-medium transition-all duration-200 border ${
+                  selectedSize === size
+                    ? 'bg-primary text-primary-foreground border-primary'
+                    : 'bg-secondary text-secondary-foreground border-transparent hover:border-primary/50'
+                }`}
               >
                 {size}
-              </span>
+              </button>
             ))}
           </div>
         </div>
@@ -75,10 +85,11 @@ const ProductCard = ({ product, index, phoneNumber }: ProductCardProps) => {
         {/* WhatsApp Button */}
         <Button
           onClick={handleWhatsAppOrder}
-          className="w-full bg-whatsapp hover:bg-whatsapp-hover text-primary-foreground font-semibold py-5 rounded-lg transition-all duration-300 hover:shadow-lg"
+          disabled={!selectedSize}
+          className="w-full bg-whatsapp hover:bg-whatsapp-hover text-primary-foreground font-semibold py-5 rounded-lg transition-all duration-300 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <MessageCircle size={18} className="mr-2" />
-          Order on WhatsApp
+          {selectedSize ? `Order Size ${selectedSize}` : 'Select a Size'}
         </Button>
       </div>
     </div>
