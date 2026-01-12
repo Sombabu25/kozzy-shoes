@@ -41,36 +41,36 @@ const ProductCard = ({ product, index, phoneNumber }: ProductCardProps) => {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
         />
-        <div className="absolute top-3 right-3 bg-price-offer text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+        <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-price-offer text-primary-foreground px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-semibold">
           Save Rs. {product.marketPrice - product.offerPrice}
         </div>
       </div>
 
       {/* Product Details */}
-      <div className="p-4 md:p-5">
-        <h3 className="font-semibold text-lg text-card-foreground mb-2 line-clamp-2">
+      <div className="p-3 sm:p-4 md:p-5">
+        <h3 className="font-semibold text-base sm:text-lg text-card-foreground mb-1.5 sm:mb-2 line-clamp-2">
           {product.name}
         </h3>
 
         {/* Pricing */}
-        <div className="flex items-center gap-3 mb-3">
-          <span className="text-2xl font-bold text-price-offer">
+        <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+          <span className="text-lg sm:text-2xl font-bold text-price-offer">
             Rs. {product.offerPrice.toLocaleString()}
           </span>
-          <span className="text-price-strike line-through text-sm">
+          <span className="text-price-strike line-through text-xs sm:text-sm">
             Rs. {product.marketPrice.toLocaleString()}
           </span>
         </div>
 
         {/* Sizes */}
-        <div className="mb-4">
-          <p className="text-xs text-muted-foreground mb-2">Select Size:</p>
-          <div className="flex flex-wrap gap-1.5">
+        <div className="mb-3 sm:mb-4">
+          <p className="text-xs text-muted-foreground mb-1.5 sm:mb-2">Select Size:</p>
+          <div className="flex flex-wrap gap-1 sm:gap-1.5">
             {product.sizes.map((size) => (
               <button
                 key={size}
                 onClick={() => setSelectedSize(size)}
-                className={`px-3 py-1.5 text-xs rounded-md font-medium transition-all duration-200 border ${
+                className={`px-2.5 py-1 sm:px-3 sm:py-1.5 text-xs rounded-md font-medium transition-all duration-200 border ${
                   selectedSize === size
                     ? 'bg-primary text-primary-foreground border-primary'
                     : 'bg-secondary text-secondary-foreground border-transparent hover:border-primary/50'
@@ -86,9 +86,9 @@ const ProductCard = ({ product, index, phoneNumber }: ProductCardProps) => {
         <Button
           onClick={handleWhatsAppOrder}
           disabled={!selectedSize}
-          className="w-full bg-whatsapp hover:bg-whatsapp-hover text-primary-foreground font-semibold py-5 rounded-lg transition-all duration-300 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-whatsapp hover:bg-whatsapp-hover text-primary-foreground font-semibold py-3 sm:py-5 rounded-lg transition-all duration-300 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
         >
-          <MessageCircle size={18} className="mr-2" />
+          <MessageCircle size={16} className="mr-1.5 sm:mr-2 flex-shrink-0" />
           Order on WhatsApp
         </Button>
       </div>
