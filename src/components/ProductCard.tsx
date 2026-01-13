@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface Product {
-  id: number;
+  id: string | number;
   name: string;
   image: string;
   marketPrice: number;
