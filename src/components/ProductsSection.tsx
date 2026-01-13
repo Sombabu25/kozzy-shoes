@@ -23,7 +23,7 @@ const ProductsSection = () => {
         .from('products')
         .select('id, name, image_url, market_price, offer_price, sizes')
         .eq('is_active', true)
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: true });
 
       if (error) {
         console.error('Error fetching products:', error);
