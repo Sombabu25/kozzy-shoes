@@ -62,7 +62,7 @@ const Navbar = () => {
             }}
             className="text-xl md:text-2xl font-bold text-navbar-foreground hover:text-primary transition-colors"
           >
-            Karan <span className="text-primary">Collection</span>
+            KOZY <span className="text-primary">Shoes</span>
           </a>
 
           {/* Desktop Navigation */}

@@ -33,7 +33,7 @@ const AboutSection = () => {
             About <span className="text-gradient">Us</span>
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            Karan Collection is a premium footwear store providing branded and affordable shoes 
+            KOZY Shoes is a premium footwear store providing branded and affordable shoes 
             with fast delivery across Nepal. We believe everyone deserves quality footwear 
             without breaking the bank.
           </p>

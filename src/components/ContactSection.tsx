@@ -133,7 +133,7 @@ const ContactSection = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Karan Collection Location"
+              title="KOZY Shoes Location"
               className="grayscale hover:grayscale-0 transition-all duration-500"
             />
           </div>
