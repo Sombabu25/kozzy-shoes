@@ -1,6 +1,6 @@
 import { MessageCircle } from 'lucide-react';
 
-const PHONE_NUMBER = '9779811825657';
+const PHONE_NUMBER = '9779841606236';
 
 const FloatingWhatsApp = () => {
   const handleClick = () => {

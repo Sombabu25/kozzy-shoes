@@ -1,8 +1,8 @@
 import { MapPin, Phone, MessageCircle, Clock, Truck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const PHONE_NUMBER = '9779811825657';
-const DISPLAY_PHONE = '+977 9811825657';
+const PHONE_NUMBER = '9779841606236';
+const DISPLAY_PHONE = '+977 9841606236';
 
 const ContactSection = () => {
   const handleWhatsAppClick = () => {
@@ -43,8 +43,8 @@ const ContactSection = () => {
                     Store Location
                   </h3>
                   <p className="text-muted-foreground">
-                    Kalanki, Kathmandu<br />
-                    Near Cambridge College
+                    Kandaghari, Kathmandu<br />
+                    Near Gandhi School
                   </p>
                 </div>
               </div>
