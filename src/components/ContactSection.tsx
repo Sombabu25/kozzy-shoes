@@ -126,7 +126,7 @@ const ContactSection = () => {
           {/* Google Map */}
           <div className="bg-card rounded-xl overflow-hidden border border-border h-[400px] lg:h-auto min-h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5684619655!2d85.27635007546896!3d27.69375762615901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19c9a2f9d5d3%3A0x7c3c7c9c2c5c5c5c!2sKalanki%2C%20Kathmandu!5e0!3m2!1sen!2snp!4v1699000000000!5m2!1sen!2snp"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.0!2d85.35!3d27.68!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19!2sKandaghari%2C%20Kathmandu!5e0!3m2!1sen!2snp!4v1699000000000!5m2!1sen!2snp"
               width="100%"
               height="100%"
               style={{ border: 0 }}
