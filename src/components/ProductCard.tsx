@@ -24,7 +24,7 @@ const ProductCard = ({ product, index, phoneNumber }: ProductCardProps) => {
     if (!selectedSize) return;
     
     const message = encodeURIComponent(
-      `Hi! I'm interested in ordering:\n\n*${product.name}*\nSize: ${selectedSize}\nPrice: Rs. ${product.offerPrice.toLocaleString()}\n\nPlease confirm availability and delivery details.`
+      `Hi! I'm interested in ordering:\n\n*${product.name}*\nSize: ${selectedSize}\nPrice: Rs. ${product.offerPrice.toLocaleString()}\n\nProduct Image: ${product.image}\n\nPlease confirm availability and delivery details.`
     );
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
