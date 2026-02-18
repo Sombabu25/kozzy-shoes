@@ -11,7 +11,7 @@ interface Product {
   sizes: number[];
 }
 
-const PHONE_NUMBER = '9779811825657';
+const PHONE_NUMBER = '9779841606236';
 
 const ProductsSection = () => {
   const [products, setProducts] = useState<Product[]>([]);
