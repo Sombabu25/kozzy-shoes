@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Welcome to online store of "kozy-shoes"
 
 ## Project info
 
