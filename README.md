@@ -1,73 +1,119 @@
-# Welcome to online store of "kozy-shoes"
+# Kozy Shoes
 
-## Project info
+A modern e-commerce web application for browsing and purchasing footwear online.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Overview
 
-## How can I edit this code?
+**Kozy Shoes** is an online footwear store built with modern web technologies. The application provides customers with a simple and responsive shopping experience for discovering shoes, viewing product details, and managing their shopping cart.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+*  Modern home page
+*  Product catalog
+*  Product search
+*  Product categories
+*  Product details
+*  Shopping cart
+*  Wishlist
+*  Responsive design
+*  Modern and clean user interface
+*  Fast and optimized frontend
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Technologies Used
 
-Changes made via Lovable will be committed automatically to this repo.
+* **React** – Frontend library
+* **TypeScript** – Type-safe JavaScript
+* **Vite** – Development and build tool
+* **Tailwind CSS** – Styling framework
+* **shadcn/ui** – UI component library
 
-**Use your preferred IDE**
+## Project Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```text
+kozy-shoes/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── hooks/
+│   ├── lib/
+│   └── App.tsx
+├── index.html
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+└── vite.config.ts
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Getting Started
 
-Follow these steps:
+### Prerequisites
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Make sure you have the following installed:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+* Node.js
+* npm
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Installation
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Clone the repository:
+
+```bash
+git clone https://github.com/Sombabu25/kozzy-shoes.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd kozzy-shoes
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+### Run the Development Server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will start on the local development server.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Build for Production
 
-**Use GitHub Codespaces**
+Create a production build:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+Preview the production build locally:
 
-This project is built with:
+```bash
+npm run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Development
 
-## How can I deploy this project?
+The project uses a component-based architecture with React and TypeScript. Styling is handled using Tailwind CSS, while reusable interface components are built using shadcn/ui.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## Future Improvements
 
-## Can I connect a custom domain to my Lovable project?
+Planned improvements may include:
 
-Yes, you can!
+* Customer authentication
+* Online payment integration
+* Order tracking
+* Admin dashboard
+* Inventory management
+* Product reviews and ratings
+* Advanced product filtering
+* Database integration
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project is intended for educational and development purposes.
